@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:handred_plus_app/core/utils/values_manager.dart';
 import '../../../core/utils/assets_manager.dart';
 import '../../../core/utils/strings_manager.dart';
 import '../../../core/widgets/custom_buttons.dart';
@@ -37,23 +38,18 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
         Positioned(
             left: 0,
             right: 0,
-            bottom: 300.w,
+            bottom: AppPadding.p300,
             child: CustomIndicator(
               dotIndex: pageController!.hasClients ? pageController?.page : 0,
             )),
         Positioned(
-          left: 100,
-          right: 100,
+          left: AppPadding.p34,
+          right: AppPadding.p34,
           bottom: 80,
-          child: CustomGeneralButton(
-              onTap: () {
-                if (pageController!.page! < 2) {
-                  pageController?.nextPage(
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.easeIn);
-                } else {}
-              },
-              text: AppStrings.next),
+          child: ElevatedButton(
+            onPressed: () {},
+            child: const Text(AppStrings.next),
+          ),
         )
       ],
     );

@@ -23,10 +23,6 @@ class MyApp extends StatelessWidget {
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,
             theme: getApplicationTheme(),
-            //ThemeData(
-            //               fontFamily: 'BoutrosART Medium',
-            //               primarySwatch: Colors.blue,
-            //             ),
             routerConfig: AppRouter.router,
           );
         },

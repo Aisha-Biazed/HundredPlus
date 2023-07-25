@@ -22,16 +22,15 @@ class PageViewItem extends StatelessWidget {
             image!,
           )),
           70.verticalSpace,
-          Text(
-            title!,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18.sp, color: ColorManager.darkLight),
-          ),
-          Text(
-            subTitle!,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18.sp, color: ColorManager.darkLight),
-          ),
+          Text(title!,
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.titleMedium
+
+              // TextStyle(fontSize: 18.sp, color: ColorManager.darkLight),
+              ),
+          Text(subTitle!,
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.titleMedium),
         ],
       ),
     );
